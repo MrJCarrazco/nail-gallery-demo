@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow"><!-- DEMO: keep noindex until commissioned -->
+<title>Nail Gallery — Nail Salon in Palmer, Alaska | DEMO PREVIEW</title>
+<meta name="description" content="DEMO website concept for Nail Gallery, a nail salon at 304 W Evergreen Ave Ste 104, Palmer, Alaska — manicures, pedicures and gel polish. Unsolicited preview, not commissioned by the business.">
+<meta name="theme-color" content="#140a14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#140a14; --ink2:#1d0f1e; --panel:#2b1629; --panel2:#1f1020;
+  --blush:#f7a8c4; --rose:#ff7da6; --gold:#e9c46a; --champ:#f3dcc4;
+  --cream:#fdf2f6; --mauve:#c9a5bb; --plum:#9b7791;
+  --display:'Cormorant Garamond',Georgia,serif; --body:'Jost',system-ui,-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--body);color:var(--mauve);background:var(--ink);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300}
+::selection{background:var(--rose);color:#2b0a18}
+img,svg{max-width:100%}
+a{color:var(--blush)}
+
+/* ---------- demo banner ---------- */
+.demo-banner{background:repeating-linear-gradient(45deg,var(--rose),var(--rose) 12px,#140a14 12px,#140a14 24px);padding:3px;position:relative;z-index:60}
+.demo-banner p{background:#140a14;color:var(--blush);text-align:center;font-weight:500;font-size:.8rem;padding:.65rem .8rem;letter-spacing:.015em;line-height:1.55}
+.demo-banner b{color:var(--gold)}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.8rem 1.1rem;background:rgba(20,10,20,.84);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid rgba(201,165,187,.16)}
+.brand{display:flex;align-items:center;gap:.6rem;min-width:0}
+.brand svg{width:30px;height:30px;flex:none}
+.brand .txt{font-family:var(--display);font-weight:600;font-size:1.14rem;color:var(--cream);line-height:1.15;letter-spacing:.01em}
+.brand .txt b{display:block;font-weight:400;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--plum);font-family:var(--body)}
+.call-top{background:linear-gradient(120deg,var(--rose),var(--blush) 60%,var(--gold));color:#2b0a18;font-weight:600;text-decoration:none;padding:.6rem 1rem;border-radius:999px;font-size:.86rem;white-space:nowrap;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 6px 20px rgba(255,125,166,.26)}
+.call-top:hover,.call-top:focus{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,125,166,.46)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:94vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3.2rem 1.15rem 11rem;isolation:isolate;overflow:hidden;
+  background:linear-gradient(185deg,#24122300 0%,#140a14 58%,#0e060e 100%),radial-gradient(ellipse 90% 60% at 50% 8%,#3a1b35 0%,#1d0f1e 48%,#140a14 100%)}
+@supports (min-height:94svh){.hero{min-height:94svh}}
+#sparkle{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 100% 55% at 50% 0%,rgba(20,10,20,0) 32%,rgba(20,10,20,.5) 100%)}
+.wave{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;line-height:0}
+.wave svg{display:block;width:100%;height:auto}
+.mark{width:clamp(54px,13vw,76px);margin:0 auto 1.4rem;opacity:0;animation:rise .9s .1s ease forwards}
+.kicker{font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:var(--plum);margin-bottom:1rem;opacity:0;animation:rise .9s .22s ease forwards}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.7rem,11vw,5.6rem);line-height:1;color:var(--cream);max-width:16ch;margin:0 auto;letter-spacing:-.01em;text-wrap:balance;opacity:0;animation:rise .9s .34s ease forwards}
+.hero h1 .glow{background:linear-gradient(100deg,var(--rose) 8%,var(--blush) 36%,var(--gold) 62%,var(--rose) 94%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 9s linear infinite;font-style:italic}
+@keyframes shimmer{to{background-position:-220% 0}}
+.hero .sub{max-width:37rem;margin:1.35rem auto 2.1rem;color:var(--mauve);font-size:clamp(1rem,2.4vw,1.14rem);opacity:0;animation:rise .9s .46s ease forwards}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:rise .9s .58s ease forwards;position:relative;z-index:2}
+.cta{display:inline-block;font-weight:600;font-size:1rem;text-decoration:none;padding:1rem 1.9rem;border-radius:999px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,color .25s ease;will-change:transform}
+.cta.primary{background:linear-gradient(120deg,var(--rose),var(--blush) 55%,var(--gold));color:#2b0a18;box-shadow:0 12px 36px rgba(255,125,166,.34)}
+.cta.primary:hover,.cta.primary:focus{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 48px rgba(255,125,166,.5)}
+.cta.ghost{color:var(--cream);border:1.5px solid rgba(253,242,246,.32);background:rgba(20,10,20,.35);backdrop-filter:blur(6px)}
+.cta.ghost:hover,.cta.ghost:focus{transform:translateY(-3px);border-color:var(--blush);color:var(--blush)}
+.hero .pin{margin-top:1.7rem;font-size:.86rem;color:var(--plum);position:relative;z-index:2;opacity:0;animation:rise .9s .7s ease forwards}
+.scroll-hint{position:absolute;bottom:.9rem;left:50%;transform:translateX(-50%);color:rgba(253,242,246,.38);font-size:1.3rem;animation:bob 2.2s ease-in-out infinite;z-index:3}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,9px)}}
+
+/* ---------- marquee ---------- */
+.marquee{background:linear-gradient(100deg,var(--rose),var(--blush) 50%,var(--gold));color:#2b0a18;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-weight:600;font-size:.9rem;letter-spacing:.18em;text-transform:uppercase;position:relative;z-index:5;box-shadow:0 12px 34px rgba(0,0,0,.5)}
+.marquee-track{display:inline-block;animation:marquee 32s linear infinite}
+@media (prefers-reduced-motion: reduce){.marquee-track{animation:none}}
+.marquee span{margin:0 1rem}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:4.6rem 1.15rem;max-width:68rem;margin:0 auto;position:relative}
+.sec-kicker{font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--rose);margin-bottom:.8rem}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(2.1rem,6vw,3.4rem);color:var(--cream);line-height:1.04;margin-bottom:1rem;letter-spacing:-.005em;text-wrap:balance}
+h2 em{font-style:italic;background:linear-gradient(100deg,var(--rose),var(--blush) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:40rem;font-size:1.02rem}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:1.22fr 1fr;gap:1.1rem;margin-top:2.3rem}
+.svc{position:relative;border-radius:20px;padding:1.9rem 1.7rem;background:linear-gradient(155deg,var(--panel) 0%,var(--panel2) 100%);border:1px solid rgba(201,165,187,.17);overflow:hidden;transition:transform .4s cubic-bezier(.2,.7,.3,1),border-color .4s ease,box-shadow .4s ease}
+.svc::after{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,125,166,.12),transparent 60%);opacity:0;transition:opacity .4s ease}
+.svc:hover{transform:translateY(-6px);border-color:rgba(255,125,166,.48);box-shadow:0 24px 54px rgba(0,0,0,.55)}
+.svc:hover::after{opacity:1}
+.svc .num{font-size:.7rem;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+.svc h3{font-family:var(--display);font-weight:600;font-size:clamp(1.45rem,3.4vw,1.95rem);color:var(--cream);margin:.5rem 0 .6rem;letter-spacing:0;line-height:1.14}
+.svc p{color:var(--mauve);font-size:.96rem;max-width:34rem}
+.svc .tagrow{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
+.tag{font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;font-weight:500;color:var(--blush);border:1px solid rgba(247,168,196,.32);background:rgba(247,168,196,.07);padding:.3rem .65rem;border-radius:999px}
+.svc.feature{grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;
+  background:linear-gradient(165deg,#3b1c36 0%,#26122a 50%,#180c1a 100%)}
+.svc.feature::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 72% 52% at 72% 14%,rgba(255,125,166,.22),transparent 68%)}
+.svc.feature .art{position:absolute;top:1.3rem;right:1.1rem;width:min(50%,200px);animation:floaty 8s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-11px) rotate(1.4deg)}}
+.svc .deco{position:absolute;right:-20px;bottom:-22px;width:112px;opacity:.1;transition:opacity .4s ease,transform .7s ease}
+.svc:hover .deco{opacity:.28;transform:rotate(16deg) scale(1.07)}
+
+/* ---------- placeholder primitives ---------- */
+.ph-box{margin-top:1.2rem;border:1px dashed rgba(233,196,106,.5);background:rgba(233,196,106,.06);border-radius:12px;padding:.9rem 1rem}
+.ph-box .lbl{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.35rem}
+.ph-box p{font-size:.89rem;color:var(--mauve);margin:0}
+.ph-box ul{margin:.5rem 0 0 1.1rem;font-size:.86rem;color:var(--mauve)}
+.ph-box ul li{margin-bottom:.2rem}
+
+/* photo placeholders */
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-top:2rem}
+.photo-ph{aspect-ratio:1/1;border:2px dashed rgba(233,196,106,.45);border-radius:16px;background:rgba(233,196,106,.045);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem;gap:.5rem}
+.photo-ph svg{width:30px;height:30px;opacity:.6}
+.photo-ph span{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;line-height:1.5}
+.photo-note{font-size:.78rem;color:rgba(201,165,187,.52);margin-top:1rem;font-style:italic;max-width:42rem}
+
+/* ---------- reputation band ---------- */
+.trust{max-width:none;padding:4.4rem 1.15rem;text-align:center;background:linear-gradient(180deg,var(--ink),#1c0e1d 50%,var(--ink))}
+.trust-wrap{max-width:62rem;margin:2.3rem auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.9rem}
+.trust-item .big{font-family:var(--display);font-weight:600;font-size:clamp(2.2rem,6vw,3.4rem);color:var(--cream);line-height:1;letter-spacing:-.01em}
+.trust-item .big .accent{background:linear-gradient(100deg,var(--rose),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.trust-item p{color:var(--plum);font-size:.78rem;margin-top:.5rem;letter-spacing:.11em;text-transform:uppercase;line-height:1.5}
+.trust-item .src{display:block;font-size:.68rem;letter-spacing:.06em;text-transform:none;color:rgba(201,165,187,.5);margin-top:.35rem;font-style:italic}
+.trust-src{font-size:.76rem;color:rgba(201,165,187,.45);margin-top:2.1rem;max-width:44rem;margin-left:auto;margin-right:auto}
+.trust-src a{color:rgba(201,165,187,.72)}
+
+/* ---------- listings audit ---------- */
+.audit{max-width:none;background:linear-gradient(170deg,#1b0d1c 0%,var(--ink) 65%);padding:4.8rem 1.15rem}
+.audit-in{max-width:52rem;margin:0 auto}
+.audit h2{text-align:center}
+.audit .lede{margin:0 auto;text-align:center}
+.finding{margin-top:1.1rem;border-radius:18px;padding:1.5rem 1.5rem;background:linear-gradient(155deg,var(--panel),var(--panel2));border:1px solid rgba(201,165,187,.17);border-left:3px solid var(--gold)}
+.finding h3{font-family:var(--body);font-weight:600;font-size:1.02rem;color:var(--cream);margin-bottom:.5rem;letter-spacing:.01em;line-height:1.4}
+.finding p{font-size:.93rem;color:var(--mauve)}
+.finding p+p{margin-top:.6rem}
+.finding code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:rgba(253,242,246,.09);padding:.12rem .4rem;border-radius:5px;color:var(--champ);word-break:break-all}
+.finding .obs{font-size:.8rem;color:rgba(201,165,187,.6);margin-top:.7rem;font-style:italic;line-height:1.6}
+.finding.good{border-left-color:var(--blush)}
+
+/* ---------- find / hours ---------- */
+.find-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:1.2rem;margin-top:2.2rem;align-items:stretch}
+.find-card{border-radius:20px;padding:1.9rem 1.7rem;background:linear-gradient(155deg,var(--panel),var(--panel2));border:1px solid rgba(201,165,187,.17)}
+.find-card h3{font-family:var(--display);color:var(--cream);font-size:1.35rem;margin-bottom:.8rem;letter-spacing:.01em;font-weight:600}
+.find-card .addr{font-size:1rem;color:var(--mauve)}
+.find-card .addr a{color:var(--blush);text-decoration:none;font-weight:600}
+.find-card .addr a:hover{text-decoration:underline}
+.order-links{display:flex;flex-direction:column;gap:.6rem;margin-top:1.2rem}
+.order-links a{display:block;text-align:center;padding:.9rem;border-radius:12px;font-weight:600;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease;letter-spacing:.02em}
+.order-links a:hover{transform:translateY(-2px)}
+.order-links .call{background:linear-gradient(120deg,var(--rose),var(--blush) 60%,var(--gold));color:#2b0a18;box-shadow:0 8px 24px rgba(255,125,166,.28)}
+.order-links .dir{border:1.5px solid rgba(253,242,246,.3);color:var(--cream)}
+.order-links .dir:hover{border-color:var(--blush);color:var(--blush)}
+.find-card .note{font-size:.79rem;color:rgba(201,165,187,.52);margin-top:1rem;font-style:italic}
+.map-wrap{border-radius:20px;overflow:hidden;border:1px solid rgba(201,165,187,.2);min-height:360px;box-shadow:0 20px 48px rgba(0,0,0,.5)}
+.map-wrap iframe{display:block;width:100%;height:100%;min-height:360px;border:0;filter:saturate(.7) contrast(1.05) brightness(.9)}
+.map-note{font-size:.76rem;color:rgba(201,165,187,.45);margin-top:.65rem}
+.map-note a{color:rgba(201,165,187,.7)}
+
+/* ---------- booking ---------- */
+.book{max-width:none;background:linear-gradient(170deg,#1c0e1d 0%,var(--ink) 62%);padding:4.8rem 1.15rem}
+.book-in{max-width:36rem;margin:0 auto;text-align:center}
+.book-in form{text-align:left;margin-top:2rem;background:rgba(43,22,41,.72);border:1px solid rgba(201,165,187,.2);border-radius:20px;padding:1.8rem;backdrop-filter:blur(10px)}
+.book-in label{display:block;font-weight:500;margin:.85rem 0 .35rem;font-size:.72rem;color:var(--plum);text-transform:uppercase;letter-spacing:.15em}
+.book-in input,.book-in textarea,.book-in select{width:100%;padding:.82rem .9rem;border:1px solid rgba(201,165,187,.26);border-radius:12px;font:inherit;background:rgba(20,10,20,.6);color:var(--cream);transition:border-color .25s ease,box-shadow .25s ease}
+.book-in input:focus,.book-in textarea:focus,.book-in select:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(255,125,166,.15)}
+.book-in button{margin-top:1.4rem;width:100%;background:linear-gradient(120deg,var(--rose),var(--blush) 55%,var(--gold));color:#2b0a18;font-weight:600;font-size:1.02rem;border:none;padding:1rem;border-radius:12px;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease;letter-spacing:.02em;font-family:var(--body)}
+.book-in button:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,125,166,.42)}
+.book-in small{display:block;margin-top:.85rem;color:rgba(201,165,187,.5);text-align:center;line-height:1.55}
+
+footer{background:#0b050b;color:rgba(201,165,187,.55);text-align:center;padding:2.2rem 1.1rem 6.2rem;font-size:.81rem}
+footer p+p{margin-top:.5rem}
+footer .nap{color:var(--mauve);font-weight:500}
+footer .agency{color:var(--plum)}
+.sticky-call{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(100deg,var(--rose),var(--blush) 55%,var(--gold));text-align:center;padding:.85rem;z-index:55;box-shadow:0 -8px 28px rgba(0,0,0,.55)}
+.sticky-call a{color:#2b0a18;font-weight:700;text-decoration:none;font-size:1.02rem;letter-spacing:.01em}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .85s ease,transform .85s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+
+@media (max-width:820px){
+  .svc-grid{grid-template-columns:1fr}
+  .svc.feature{min-height:340px}
+  .find-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  section{padding:3.3rem 1.05rem}
+  .trust,.book,.audit{padding:3.3rem 1.05rem}
+  .brand .txt{font-size:1rem}
+  .call-top{padding:.55rem .8rem;font-size:.78rem}
+  .cta{width:100%;max-width:21rem}
+  .svc{padding:1.6rem 1.3rem}
+  .finding{padding:1.3rem 1.2rem}
+  /* On a narrow card the absolutely-positioned artwork overlapped the heading.
+     Put it back in normal flow above the text instead. */
+  .svc.feature .art{position:static;width:120px;margin:0 0 .5rem;animation:none}
+  .svc.feature{min-height:0}
+}
+
+/* ---- reduced-motion safety net ----
+   The entrance animations start at opacity:0. The blanket rule at the top of this
+   sheet disables animations for prefers-reduced-motion users, which would leave
+   every hero element stuck at opacity:0 — a completely blank hero with no
+   headline, no CTA and no phone number. Force the end-state instead.
+   MUST stay LAST in this stylesheet. */
+@media (prefers-reduced-motion: reduce){
+  .mark,.kicker,.hero h1,.hero .sub,.cta-row,.hero .pin,
+  .reveal,.reveal.d1,.reveal.d2,.reveal.d3{
+    opacity:1!important;transform:none!important;animation:none!important
+  }
+  .hero h1 .glow,h2 em,.trust-item .big .accent{background-position:0 0!important}
+  .scroll-hint{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner"><p><b>UNSOLICITED DEMO PREVIEW</b> — this page was built for Nail Gallery by Digital Consulting Studios as a free sample. It is <b>not commissioned by, affiliated with, or endorsed by</b> the business. Every detail below came from public listings; photos and hours are unfilled placeholders.</p></div>
+
+<header>
+  <div class="brand">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <!-- polish bottle mark -->
+      <rect x="21" y="4" width="6" height="7" rx="1.4" fill="#e9c46a"/>
+      <path d="M22.5 11h3v3h-3z" fill="rgba(201,165,187,.7)"/>
+      <path d="M15 19a9 9 0 0 1 4.6-7.8l.4-.2h8l.4.2A9 9 0 0 1 33 19v19a4 4 0 0 1-4 4h-10a4 4 0 0 1-4-4z" fill="none" stroke="rgba(201,165,187,.5)" stroke-width="2"/>
+      <path d="M15 26h18v12a4 4 0 0 1-4 4h-10a4 4 0 0 1-4-4z" fill="#ff7da6"/>
+      <circle cx="24" cy="33" r="2.4" fill="#fdf2f6" opacity=".75"/>
+    </svg>
+    <div class="txt">Nail Gallery<b>Palmer · Alaska</b></div>
+  </div>
+  <a class="call-top" href="tel:+19077451311">📞 (907) 745-1311</a>
+</header>
+
+<div class="hero">
+  <canvas id="sparkle" aria-hidden="true"></canvas>
+
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 120 120">
+      <g stroke="rgba(247,168,196,.4)" stroke-width="1.4" fill="none">
+        <circle cx="60" cy="60" r="52"/>
+        <circle cx="60" cy="60" r="42"/>
+      </g>
+      <!-- stylised nail / almond shape -->
+      <path d="M60 26c11 0 19 9 19 22 0 17-8 32-19 32s-19-15-19-32c0-13 8-22 19-22z" fill="url(#ng)" opacity=".95"/>
+      <path d="M60 26c11 0 19 9 19 22 0 3-.4 6-1 9-5-3-11-4.6-18-4.6s-13 1.6-18 4.6c-.6-3-1-6-1-9 0-13 8-22 19-22z" fill="#fdf2f6" opacity=".22"/>
+      <defs>
+        <linearGradient id="ng" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ff7da6"/>
+          <stop offset="55%" stop-color="#f7a8c4"/>
+          <stop offset="100%" stop-color="#e9c46a"/>
+        </linearGradient>
+      </defs>
+      <g fill="#e9c46a">
+        <path d="M94 34l1.8 4.6 4.6 1.8-4.6 1.8L94 46.8l-1.8-4.6-4.6-1.8 4.6-1.8z" opacity=".9"/>
+        <path d="M26 78l1.4 3.6 3.6 1.4-3.6 1.4L26 88l-1.4-3.6L21 83l3.6-1.4z" opacity=".7"/>
+      </g>
+    </svg>
+  </div>
+
+  <p class="kicker">Nail Salon · Palmer, Alaska</p>
+  <h1>Manicures, pedicures, <span class="glow">gel.</span></h1>
+  <p class="sub">Nail Gallery is a neighborhood nail salon on West Evergreen Avenue in downtown Palmer. One call books your chair — no app, no account, no third&#8209;party booking fee.</p>
+  <div class="cta-row">
+    <a class="cta primary" data-magnet href="tel:+19077451311">Call (907) 745-1311</a>
+    <a class="cta ghost" data-magnet href="#services">See Services</a>
+  </div>
+  <p class="pin">📍 304 W Evergreen Ave, Ste 104 · Palmer, AK 99645</p>
+
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+      <path d="M0 96c180 54 340 54 520 18s360-54 540-12 280 60 380 42v76H0z" fill="#1c0e1d" opacity=".85"/>
+      <path d="M0 140c200 46 360 40 540 8s380-40 560-6 240 46 340 34v44H0z" fill="#170b17"/>
+      <path d="M0 180c220 30 400 26 600 2s420-22 620 4 180 22 220 16v18H0z" fill="#140a14"/>
+    </svg>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">↓</div>
+</div>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mtrack">
+  <span>Manicures</span><span>✦</span><span>Pedicures</span><span>✦</span><span>Gel Polish</span><span>✦</span><span>Palmer, Alaska</span><span>✦</span><span>(907) 745-1311</span><span>✦</span>
+</div></div>
+
+<section id="services">
+  <p class="sec-kicker reveal">Services</p>
+  <h2 class="reveal">What the salon <em>offers</em></h2>
+  <p class="lede reveal">Only services confirmed in Nail Gallery's public listings are shown below. Nothing on this page has been invented — the full menu and pricing are left blank for the owner to fill in.</p>
+  <div class="svc-grid">
+
+    <div class="svc feature reveal">
+      <svg class="art" viewBox="0 0 200 150" aria-hidden="true">
+        <!-- polish bottles -->
+        <g opacity=".95">
+          <rect x="30" y="18" width="12" height="12" rx="2" fill="#e9c46a"/>
+          <path d="M24 44a12 12 0 0 1 6-10h12a12 12 0 0 1 6 10v62a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="none" stroke="#f7a8c4" stroke-width="2.4"/>
+          <path d="M24 66h24v40a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="#ff7da6"/>
+        </g>
+        <g opacity=".95">
+          <rect x="88" y="10" width="12" height="12" rx="2" fill="#f3dcc4"/>
+          <path d="M82 36a12 12 0 0 1 6-10h12a12 12 0 0 1 6 10v70a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="none" stroke="#e9c46a" stroke-width="2.4"/>
+          <path d="M82 54h24v52a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="#e9c46a" opacity=".8"/>
+        </g>
+        <g opacity=".85">
+          <rect x="146" y="26" width="12" height="12" rx="2" fill="#c9a5bb"/>
+          <path d="M140 52a12 12 0 0 1 6-10h12a12 12 0 0 1 6 10v54a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="none" stroke="#fdf2f6" stroke-width="2.2"/>
+          <path d="M140 72h24v34a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="#fdf2f6" opacity=".55"/>
+        </g>
+        <circle cx="16" cy="12" r="2.2" fill="#f7a8c4" opacity=".8"><animate attributeName="opacity" values=".8;.2;.8" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="186" cy="16" r="1.8" fill="#e9c46a" opacity=".7"><animate attributeName="opacity" values=".3;.9;.3" dur="4s" repeatCount="indefinite"/></circle>
+      </svg>
+      <span class="num">01 — Confirmed</span>
+      <h3>Gel Polish</h3>
+      <p>Long-wear gel colour. Listed among Nail Gallery's services in its public salon listing. Shade range, add-ons and pricing are not published anywhere public, so they are deliberately left off this page.</p>
+      <div class="tagrow">
+        <span class="tag">Confirmed service</span><span class="tag">Pricing not published</span>
+      </div>
+    </div>
+
+    <div class="svc reveal d1">
+      <span class="num">02 — Confirmed</span>
+      <h3>Manicures</h3>
+      <p>Hand and nail care. Confirmed in Nail Gallery's public listings. Exact treatments offered under this heading are for the owner to specify.</p>
+      <div class="tagrow"><span class="tag">Confirmed service</span></div>
+      <svg class="deco" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 14c9 0 15 7 15 17 0 14-6 26-15 26s-15-12-15-26c0-10 6-17 15-17z" fill="none" stroke="#ff7da6" stroke-width="5"/></svg>
+    </div>
+
+    <div class="svc reveal d2">
+      <span class="num">03 — Confirmed</span>
+      <h3>Pedicures</h3>
+      <p>Foot and toenail care. Confirmed in Nail Gallery's public listings. Whether spa upgrades, soaks or massage are included is not published publicly.</p>
+      <div class="tagrow"><span class="tag">Confirmed service</span></div>
+      <svg class="deco" viewBox="0 0 80 80" aria-hidden="true"><path d="M20 56c0-14 9-24 20-24s20 10 20 24" fill="none" stroke="#e9c46a" stroke-width="5"/><circle cx="26" cy="26" r="5" fill="none" stroke="#e9c46a" stroke-width="4"/><circle cx="40" cy="20" r="5" fill="none" stroke="#e9c46a" stroke-width="4"/><circle cx="54" cy="26" r="5" fill="none" stroke="#e9c46a" stroke-width="4"/></svg>
+    </div>
+  </div>
+
+  <div class="ph-box reveal" style="margin-top:1.6rem">
+    <span class="lbl">Placeholder — owner to confirm</span>
+    <p><strong>The rest of the service menu goes here.</strong> Third-party aggregator pages list extras such as acrylic full sets and nail art for this salon, but those pages are auto-generated and were not written by the business, so nothing from them is stated as fact on this page. Nothing has been invented.</p>
+    <ul>
+      <li>Full service list and what each one includes</li>
+      <li>Prices (or a deliberate "call for pricing")</li>
+      <li>Appointment vs. walk-in policy</li>
+      <li>Accepted payment methods</li>
+    </ul>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <p class="sec-kicker reveal">Gallery</p>
+  <h2 class="reveal">Your work, <em>front and centre</em></h2>
+  <p class="lede reveal">A nail salon sells on photographs. These slots are intentionally empty — no stock photos and no other salon's work are used anywhere on this page.</p>
+  <div class="photo-grid reveal d1">
+    <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e9c46a" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photo here</span></div>
+    <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e9c46a" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photo here</span></div>
+    <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e9c46a" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photo here</span></div>
+    <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e9c46a" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photo here</span></div>
+    <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e9c46a" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photo here</span></div>
+    <div class="photo-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#e9c46a" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Your photo here</span></div>
+  </div>
+  <p class="photo-note reveal">Six to twelve photographs of real work from this salon would fill this section. Photos belong to whoever took them — the owner supplies these, and this demo ships with none.</p>
+</section>
+
+<div class="trust">
+  <p class="sec-kicker reveal">Reputation</p>
+  <h2 class="reveal">What the <em>public record</em> says</h2>
+  <div class="trust-wrap">
+    <div class="trust-item reveal">
+      <div class="big"><span class="accent">4.2</span></div>
+      <p>Average rating<span class="src">105 reviews · Google</span></p>
+    </div>
+    <div class="trust-item reveal d1">
+      <div class="big"><span class="accent">4.4</span></div>
+      <p>Average rating<span class="src">25 reviews · Yelp</span></p>
+    </div>
+    <div class="trust-item reveal d2">
+      <div class="big"><span class="accent">4</span>×</div>
+      <p>Neighborhood Favorite<span class="src">2019, 2020, 2023, 2024 · Nextdoor</span></p>
+    </div>
+  </div>
+  <p class="trust-src reveal">Every figure above is an aggregate score published by the named platform, quoted with its source. <strong>No customer quote, testimonial or review text appears anywhere on this page</strong> — nothing has been written on the salon's behalf. Nextdoor "Fave Award" years are listed on <a href="https://nextdoor.com/pages/nail-gallery-palmer-ak-1/" target="_blank" rel="noopener">Nail Gallery's Nextdoor business page</a>. Ratings move over time; these were read in October 2026 and should be re-checked before going live.</p>
+</div>
+
+<div class="audit" id="audit">
+  <div class="audit-in">
+    <p class="sec-kicker reveal" style="text-align:center">Listing audit</p>
+    <h2 class="reveal">Three things we found in <em>your listings</em></h2>
+    <p class="lede reveal">Verified by hand against the live sources in October 2026. Each finding below is something anyone searching for Nail Gallery can see right now.</p>
+
+    <div class="finding reveal d1">
+      <h3>1. Your Nextdoor page publishes a website and email address that belong to a nail salon in Tacoma, Washington</h3>
+      <p>Nail Gallery's Nextdoor business page — the one carrying the correct Palmer phone number <strong>(907) 745-1311</strong> and the four Neighborhood Favorite awards — lists the website <code>gallerynailsspatacoma.com</code> and the contact email <code>webmaster@gallerynailsspatacoma.com</code>.</p>
+      <p>That name is the social-media handle of <strong>Gallery Nails And Spa, 1816 S Mildred St, Tacoma, WA</strong> — a different business, roughly 1,500 miles away. The same domain is also published as Nail Gallery's "Web" link on its MapQuest listing.</p>
+      <p>One important correction, because it changes the fix: <strong>that domain does not currently resolve at all.</strong> It returns NXDOMAIN on both Google and Cloudflare public DNS, with no address record and no mail record. So a customer who taps it does not land on the Tacoma salon — they get a browser error page, and mail to that address cannot be delivered.</p>
+      <p class="obs">Observed: nextdoor.com/pages/nail-gallery-palmer-ak-1 (website + email fields), mapquest.com Nail Gallery listing ("Web" button), DNS A and MX lookups via dns.google and cloudflare-dns.com. The Tacoma business's real, live site is a differently-spelled domain.</p>
+    </div>
+
+    <div class="finding reveal d2">
+      <h3>2. There is no website you control</h3>
+      <p>The only website-shaped result for Nail Gallery is an auto-generated page on a third-party salon-directory subdomain. It is assembled from scraped data, carries its own booking link to an unrelated platform, and lists a service menu the business did not write. There is no sign the salon controls it, can edit it, or can take it down.</p>
+      <p class="obs">Observed: the aggregator subdomain renders a full "official-looking" salon site including a service menu and an external "Reserve online" button, with no owner-contact or claim-this-page path.</p>
+    </div>
+
+    <div class="finding reveal d3">
+      <h3>3. Your opening hours disagree across three different sources</h3>
+      <p>Three public sources publish three different sets of hours for this salon. A customer checking before driving into Palmer gets a different answer depending on where they look.</p>
+      <p class="obs">Observed: one source gives Mon–Sat 9:00 AM–7:00 PM, closed Sunday. Nextdoor gives Mon–Sat 10:00 AM–7:00 PM with Sunday 10:00 AM–5:00 PM. A third gives Sunday 9:00 AM–5:00 PM. A Facebook page under the salon's name also states it is open seven days a week. Because they conflict, <strong>this demo publishes no hours at all</strong> — see the placeholder below.</p>
+    </div>
+
+    <div class="finding good reveal">
+      <h3>What is already working for you</h3>
+      <p>A 4.2 average across 105 Google reviews, 4.4 across 25 on Yelp, and <strong>four</strong> Nextdoor Neighborhood Favorite awards (2019, 2020, 2023 and 2024) are a genuinely strong local reputation. The problem is not the salon — it is that the reputation currently points at listings you do not own.</p>
+    </div>
+  </div>
+</div>
+
+<section id="visit">
+  <p class="sec-kicker reveal">Visit</p>
+  <h2 class="reveal">Find us in <em>downtown Palmer</em></h2>
+  <p class="lede reveal">Suite 104 at 304 West Evergreen Avenue — a multi-tenant building in Palmer's central business district.</p>
+
+  <div class="find-grid">
+    <div class="find-card reveal">
+      <h3>Nail Gallery</h3>
+      <p class="addr">304 W Evergreen Ave, Ste 104<br>Palmer, AK 99645<br><a href="tel:+19077451311">(907) 745-1311</a></p>
+
+      <div class="ph-box">
+        <span class="lbl">Placeholder — hours unverified</span>
+        <p><strong>Opening hours go here.</strong> They are deliberately blank: three public sources publish three conflicting schedules for this salon, so picking one would risk printing the wrong answer. The owner confirms the real hours and they go live here.</p>
+        <ul>
+          <li>Source A — Mon–Sat 9:00 AM–7:00 PM, Sunday closed</li>
+          <li>Source B — Mon–Sat 10:00 AM–7:00 PM, Sunday 10:00 AM–5:00 PM</li>
+          <li>Source C — Sunday 9:00 AM–5:00 PM</li>
+          <li>A Facebook page in the salon's name — "open 7 day/week"</li>
+        </ul>
+      </div>
+
+      <div class="order-links">
+        <a class="call" href="tel:+19077451311">📞 Call (907) 745-1311</a>
+        <a class="dir" href="https://www.openstreetmap.org/?mlat=61.59912&amp;mlon=-149.11892#map=18/61.59912/-149.11892" target="_blank" rel="noopener">🧭 Get Directions</a>
+      </div>
+      <p class="note">Address and phone number are taken from public listings and agree across Yelp, MapQuest, BBB and Nextdoor. Please confirm before this page goes live.</p>
+    </div>
+    <div class="map-wrap reveal d1">
+      <iframe title="Map — 304 W Evergreen Avenue, Palmer, Alaska"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-149.1239%2C61.5966%2C-149.1139%2C61.6016&amp;layer=mapnik&amp;marker=61.59912%2C-149.11892"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <p class="map-note reveal">Map pin is a building-level geocode of 304 W Evergreen Ave (OpenStreetMap). The suite entrance for Ste 104 is not separately mapped — exact pin to be confirmed by the owner. Map data © OpenStreetMap contributors.</p>
+</section>
+
+<div class="book">
+  <div class="book-in">
+    <p class="sec-kicker reveal">Appointments</p>
+    <h2 class="reveal">Request a <em>chair</em></h2>
+    <p class="reveal">On a live site this form would email the salon directly — no booking platform, no commission, no monthly fee. Right now it is switched off.</p>
+    <!-- DEMO: form deliberately disabled. The business has NOT been contacted.
+         On commission: action="https://formsubmit.co/OWNER_EMAIL" method="POST" -->
+    <form class="reveal d1" onsubmit="alert('Demo form — intentionally disabled. Nothing is sent anywhere and the salon has not been contacted. On a commissioned site this would email the owner directly.');return false">
+      <label for="n">Name</label><input id="n" name="name" autocomplete="name" required>
+      <label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel" required>
+      <label for="s">Service</label>
+      <select id="s" name="service">
+        <option>Manicure</option>
+        <option>Pedicure</option>
+        <option>Gel polish</option>
+        <option>Something else — I'll ask</option>
+      </select>
+      <label for="d">Preferred day &amp; time</label><input id="d" name="when" placeholder="e.g. Saturday morning">
+      <label for="m">Anything else?</label><textarea id="m" name="message" rows="3" placeholder="First visit, bringing a friend, a shape or colour you have in mind…"></textarea>
+      <button type="submit">Request Appointment</button>
+      <small>Demo form — disabled on purpose. No message is transmitted and the business has not been contacted in any way about this preview.</small>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p class="nap">Nail Gallery · 304 W Evergreen Ave, Ste 104, Palmer, AK 99645 · <a href="tel:+19077451311" style="color:inherit">(907) 745-1311</a></p>
+  <p>Unsolicited demo concept — <strong>not commissioned by, affiliated with, or endorsed by</strong> Nail Gallery. Built as a free preview by <span class="agency">Digital Consulting Studios</span>, a Mat-Su Valley web studio.</p>
+  <p>Business name, address, phone number and aggregate ratings sourced from public directories and shown with their sources named. Photographs, hours, service menu and pricing are unfilled placeholders — nothing on this page has been invented.</p>
+</footer>
+
+<div class="sticky-call"><a href="tel:+19077451311">📞 Tap to Call — (907) 745-1311</a></div>
+
+<script>
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* failsafe: never leave content permanently hidden if the observer misfires */
+setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')),3000);
+
+/* seamless marquee */
+const mt=document.getElementById('mtrack');if(mt)mt.innerHTML+=mt.innerHTML;
+
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---- sparkle / bokeh field ---- */
+const cv=document.getElementById('sparkle');
+if(cv){
+  const cx=cv.getContext('2d');
+  let W=0,H=0,dots=[],bok=[],raf=0,running=false,dpr=Math.min(devicePixelRatio||1,2);
+
+  const fit=()=>{
+    const r=cv.parentElement.getBoundingClientRect();
+    W=Math.max(r.width,320);H=Math.max(r.height,480);
+    cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+    dots=[];const n=Math.round(W*H/7000);
+    for(let i=0;i<n;i++)dots.push({
+      x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.3+.3,
+      a:Math.random()*6.283,s:.006+Math.random()*.016,
+      c:Math.random()<.5?'247,168,196':(Math.random()<.5?'233,196,106':'253,242,246')
+    });
+    bok=[];const m=Math.round(W*H/90000)+4;
+    for(let i=0;i<m;i++)bok.push({
+      x:Math.random()*W,y:Math.random()*H*.9,r:28+Math.random()*78,
+      vx:(Math.random()-.5)*.09,vy:-.04-Math.random()*.08,
+      a:.03+Math.random()*.05,
+      c:Math.random()<.6?'255,125,166':'233,196,106'
+    });
+  };
+  fit();let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(fit,160)});
+
+  function drawBokeh(){
+    cx.save();cx.globalCompositeOperation='lighter';
+    for(const b of bok){
+      b.x+=b.vx;b.y+=b.vy;
+      if(b.y+b.r<-20){b.y=H+b.r;b.x=Math.random()*W}
+      if(b.x<-b.r)b.x=W+b.r;if(b.x>W+b.r)b.x=-b.r;
+      const g=cx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);
+      g.addColorStop(0,`rgba(${b.c},${b.a})`);
+      g.addColorStop(.6,`rgba(${b.c},${b.a*.35})`);
+      g.addColorStop(1,`rgba(${b.c},0)`);
+      cx.fillStyle=g;cx.beginPath();cx.arc(b.x,b.y,b.r,0,6.283);cx.fill();
+    }
+    cx.restore();
+  }
+
+  function drawDots(){
+    for(const d of dots){
+      d.a+=d.s;const tw=.25+Math.abs(Math.sin(d.a))*.75;
+      cx.globalAlpha=tw*.8;cx.fillStyle=`rgb(${d.c})`;
+      cx.beginPath();cx.arc(d.x,d.y,d.r,0,6.283);cx.fill();
+      /* a few get a four-point sparkle cross */
+      if(d.r>1.25&&tw>.8){
+        cx.globalAlpha=tw*.4;cx.strokeStyle=`rgb(${d.c})`;cx.lineWidth=.7;
+        const L=d.r*3.4;cx.beginPath();
+        cx.moveTo(d.x-L,d.y);cx.lineTo(d.x+L,d.y);
+        cx.moveTo(d.x,d.y-L);cx.lineTo(d.x,d.y+L);cx.stroke();
+      }
+    }
+    cx.globalAlpha=1;
+  }
+
+  function frame(){
+    if(!W)fit();
+    cx.clearRect(0,0,W,H);
+    drawBokeh();drawDots();
+    raf=running?requestAnimationFrame(frame):0;
+  }
+  function paintOnce(){requestAnimationFrame(()=>{if(!W)fit();cx.clearRect(0,0,W,H);drawBokeh();drawDots()})}
+
+  /* Mobile-first: never burn CPU/battery animating a hero that is scrolled
+     off-screen or sitting in a background tab. */
+  function start(){if(rm||running)return;running=true;raf=requestAnimationFrame(frame)}
+  function stop(){running=false;if(raf)cancelAnimationFrame(raf);raf=0}
+
+  if(rm){paintOnce()}
+  else{
+    start();
+    new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:0})
+      .observe(cv.parentElement);
+    document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+  }
+}
+
+/* magnetic buttons */
+if(!rm)document.querySelectorAll('[data-magnet]').forEach(b=>{
+  b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();
+    b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.1}px,${(e.clientY-r.top-r.height/2)*.22 - 3}px)`});
+  b.addEventListener('pointerleave',()=>b.style.transform='');
+});
+
+/* service card cursor glow */
+if(!rm)document.querySelectorAll('.svc').forEach(c=>{
+  c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    c.style.setProperty('--my',(e.clientY-r.top)+'px')});
+});
+</script>
+</body>
+</html>
