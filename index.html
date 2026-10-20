@@ -225,10 +225,13 @@ footer .agency{color:var(--plum)}
   .scroll-hint{display:none}
 }
 </style>
+<meta name="legal-release" content="nail-legal-20261019">
+<link rel="stylesheet" href="compliance.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<div class="demo-banner"><p><b>UNSOLICITED DEMO PREVIEW</b> — this page was built for Nail Gallery by Digital Consulting Studios as a free sample. It is <b>not commissioned by, affiliated with, or endorsed by</b> the business. Contact details are attributed to public listings, not confirmed by the owner. Services, prices, hours and photographs are placeholders.</p></div>
+<div class="demo-banner"><p><strong>Demo design preview — not the official business website.</strong> <b>UNSOLICITED DEMO PREVIEW</b> — this page was built for Nail Gallery by Digital Consulting Studios as a free sample. It is <b>not commissioned by, affiliated with, or endorsed by</b> the business. Contact details are attributed to public listings, not confirmed by the owner. Services, prices, hours and photographs are placeholders.</p></div>
 
 <header>
   <div class="brand">
@@ -244,6 +247,7 @@ footer .agency{color:var(--plum)}
   </div>
   <a class="call-top" href="tel:+19077451311">📞 (907) 745-1311</a>
 </header>
+<main id="main-content">
 
 <div class="hero">
   <canvas id="sparkle" aria-hidden="true"></canvas>
@@ -453,6 +457,8 @@ footer .agency{color:var(--plum)}
     <p class="reveal">Form layout preview only — disabled and not connected to the salon. Any future booking method, routing, fees and appointment policy require agreement with the business.</p>
     <!-- DEMO: form deliberately disabled. -->
     <form class="reveal d1" onsubmit="alert('Demo form — disabled. Nothing is sent and no appointment is requested.');return false">
+      <p class="preview-notice">Disabled preview form — do not enter personal information. This layout does not send an inquiry, place an order or make a booking. No response is promised. <a href="privacy.html">Privacy notice</a>.</p>
+      <fieldset class="preview-fields" disabled>
       <label for="n">Name</label><input id="n" name="name" autocomplete="name" required>
       <label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel" required>
       <label for="s">Service</label>
@@ -463,11 +469,15 @@ footer .agency{color:var(--plum)}
       <label for="m">Anything else?</label><textarea id="m" name="message" rows="3" placeholder="First visit, bringing a friend, a shape or colour you have in mind…"></textarea>
       <button type="submit">Demo Only — Not Sent</button>
       <small>Demo form — disabled on purpose. No message is transmitted and no appointment is booked. Do not enter personal information.</small>
+      </fieldset>
     </form>
   </div>
 </div>
 
+</main>
 <footer>
+  <nav class="legal-links" aria-label="Legal information"><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="accessibility.html">Accessibility</a></nav>
+  <p class="publisher-note">© 2026 Digital Consulting Studios — preview design; third-party rights remain with their owners.</p>
   <p class="nap">Nail Gallery · 304 W Evergreen Ave, Ste 104, Palmer, AK 99645 · <a href="tel:+19077451311" style="color:inherit">(907) 745-1311</a></p>
   <p>Unsolicited demo concept — <strong>not commissioned by, affiliated with, or endorsed by</strong> Nail Gallery. Built as a free preview by <span class="agency">Digital Consulting Studios</span>.</p>
   <p>Business identity, contact details and map coordinates are attributed to the public listings linked above. Photographs, hours, services and pricing are placeholders. Public listings are not owner approval.</p>
@@ -579,6 +589,12 @@ if(!rm)document.querySelectorAll('.svc').forEach(c=>{
     c.style.setProperty('--mx',(e.clientX-r.left)+'px');
     c.style.setProperty('--my',(e.clientY-r.top)+'px')});
 });
+</script>
+<script>
+/* Progressive enhancement: keep content visible if the main script fails. */
+document.documentElement.classList.add('reveal-ready');setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')})},3000);
+/* SVG timing is separate from CSS animation; retain artwork but pause motion. */
+(function(){var q=matchMedia('(prefers-reduced-motion: reduce)');function sync(){document.querySelectorAll('svg').forEach(function(s){if(q.matches){s.pauseAnimations()}else{s.unpauseAnimations()}})}sync();if(q.addEventListener){q.addEventListener('change',sync)}})();
 </script>
 </body>
 </html>
